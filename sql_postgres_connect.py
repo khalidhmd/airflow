@@ -2,13 +2,13 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
 from datetime import timedelta
-from airflow.hooks.postgres_hook import PostgresHook
+from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 # PostgreSQL connection ID configured in Airflow
 PG_CONN_ID = 'postgres_conn'
 
 default_args = {
-    'owner': 'kiwilytics',
+    'owner': 'Khalid',
     'retries': 1,
     'retry_delay': timedelta(minutes=2),
 }

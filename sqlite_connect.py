@@ -1,6 +1,6 @@
 from airflow import DAG
 from airflow.providers.sqlite.operators.sqlite import SqliteOperator
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 import pandas as pd
 import sqlite3
 from datetime import datetime
